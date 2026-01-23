@@ -8,7 +8,7 @@ import { z } from "zod";
 const Email = z.object({
   fullName: z.string().min(2, "Full name is invalid!"),
   email: z.string().email({ message: "Email is invalid!" }),
-  message: z.string().min(10, "Message is too short!"),
+  message: z.string().min(2, "Message is too short!"),
 });
 export async function POST(req: Request) {
   try {
@@ -43,6 +43,7 @@ export async function POST(req: Request) {
     });
 
     if (resendError) {
+      console.error("Resend Error:", resendError);
       return Response.json({ resendError }, { status: 500 });
     }
 
