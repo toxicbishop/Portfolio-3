@@ -228,7 +228,7 @@ const projects: Project[] = [
     id: "slot-machine-v3",
     category: "Game",
     title: "Slot Machine V3",
-    src: "/assets/Slotmachine.png",
+    src: "/assets/projects/Slotmachine.png",
     screenshots: ["Slotmachine.png"],
     skills: {
       frontend: [PROJECT_SKILLS.python],
@@ -246,7 +246,7 @@ const projects: Project[] = [
             An exciting Slot Machine game developed in Python. Features include game state persistence (save/load), auto-spin mechanism, transaction history, and daily rewards.
           </TypographyP>
           <ProjectsLinks live={this.live} repo={this.github} />
-          <SlideShow images={[`${BASE_PATH}/Slotmachine.png`]} />
+          <SlideShow images={[`${BASE_PATH}/projects/Slotmachine.png`]} />
         </div>
       );
     },
@@ -255,7 +255,7 @@ const projects: Project[] = [
     id: "dsa-study-hub",
     category: "Education",
     title: "DSA Study Hub",
-    src: "/assets/DSA-Website-Photo.png",
+    src: "/assets/projects/DSA-Website-Photo.png",
     screenshots: ["DSA-Website-Photo.png"],
     skills: {
       frontend: [
@@ -278,7 +278,7 @@ const projects: Project[] = [
             DSA Study Hub is an interactive platform built to help students and developers master Data Structures and Algorithms. It features clean code snippets, complexity analysis, and interactive visualizations.
           </TypographyP>
           <ProjectsLinks live={this.live} repo={this.github} />
-          <SlideShow images={[`${BASE_PATH}/DSA-Website-Photo.png`]} />
+          <SlideShow images={[`${BASE_PATH}/projects/DSA-Website-Photo.png`]} />
         </div>
       );
     },
@@ -287,7 +287,7 @@ const projects: Project[] = [
     id: "bengaluru-cost-explorer",
     category: "Data Visualization",
     title: "Cost of Living in Bengaluru",
-    src: "/assets/costoflivingbenagluru.jpeg",
+    src: "/assets/projects/costoflivingbenagluru.jpeg",
     screenshots: ["costoflivingbenagluru.jpeg"],
     skills: {
       frontend: [PROJECT_SKILLS.js, PROJECT_SKILLS.react, PROJECT_SKILLS.tailwind],
@@ -302,7 +302,7 @@ const projects: Project[] = [
             An insightful explorer that visualizes the cost of living in various areas of Bengaluru. Helping people make informed decisions about relocation and budgeting in the Garden City.
           </TypographyP>
           <ProjectsLinks live={this.live} repo={this.github} />
-          <SlideShow images={[`${BASE_PATH}/costoflivingbenagluru.jpeg`]} />
+          <SlideShow images={[`${BASE_PATH}/projects/costoflivingbenagluru.jpeg`]} />
         </div>
       );
     },
@@ -311,7 +311,7 @@ const projects: Project[] = [
     id: "student-management-system",
     category: "Software",
     title: "Student Marks Management System",
-    src: "/assets/SMS-Pro.png",
+    src: "/assets/projects/SMS-Pro.png",
     screenshots: ["SMS-Pro.png"],
     skills: {
       frontend: [PROJECT_SKILLS.python],
@@ -326,7 +326,7 @@ const projects: Project[] = [
             A robust GUI application designed for educational institutions to manage student records and marks. It uses SQL for reliable data storage and Python for an intuitive user interface.
           </TypographyP>
           <ProjectsLinks live={this.live} repo={this.github} />
-          <SlideShow images={[`${BASE_PATH}/SMS-Pro.png`]} />
+          <SlideShow images={[`${BASE_PATH}/projects/SMS-Pro.png`]} />
         </div>
       );
     },
@@ -335,7 +335,7 @@ const projects: Project[] = [
     id: "pokeapi-data-fetcher",
     category: "Web App",
     title: "PokeAPI Data Fetcher",
-    src: "/assets/pokemon.png",
+    src: "/assets/projects/pokemon.png",
     screenshots: ["pokemon.png"],
     skills: {
       frontend: [PROJECT_SKILLS.js, PROJECT_SKILLS.react, PROJECT_SKILLS.chakra],
@@ -350,7 +350,7 @@ const projects: Project[] = [
             A fun project that fetches and displays detailed information about Pokémon using the PokeAPI. Search for your favorite Pokémon and see their stats, types, and abilities!
           </TypographyP>
           <ProjectsLinks live={this.live} repo={this.github} />
-          <SlideShow images={[`${BASE_PATH}/pokemon.png`]} />
+          <SlideShow images={[`${BASE_PATH}/projects/pokemon.png`]} />
         </div>
       );
     },
@@ -359,7 +359,7 @@ const projects: Project[] = [
     id: "music-player-python",
     category: "Desktop App",
     title: "Music Player With Python",
-    src: "/assets/Music-Player-Photo.png",
+    src: "/assets/projects/Music-Player-Photo.png",
     screenshots: ["Music-Player-Photo.png"],
     skills: {
       frontend: [PROJECT_SKILLS.python],
@@ -374,7 +374,7 @@ const projects: Project[] = [
             A sleek desktop music player built with Python. Supports all major audio formats and features an easy-to-use interface for managing your local music library.
           </TypographyP>
           <ProjectsLinks live={this.live} repo={this.github} />
-          <SlideShow images={[`${BASE_PATH}/Music-Player-Photo.png`]} />
+          <SlideShow images={[`${BASE_PATH}/projects/Music-Player-Photo.png`]} />
         </div>
       );
     },
