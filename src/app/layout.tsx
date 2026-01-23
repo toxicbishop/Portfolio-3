@@ -70,9 +70,7 @@ export default function RootLayout({
         <Providers>
           <Header />
           {children}
-          <div className="w-full flex justify-center my-4">
-            <img src="/assets/nyan-cat.gif" alt="Nyan Cat" className="h-12 w-auto" />
-          </div>
+
           <Footer />
           <AppOverlays />
         </Providers>

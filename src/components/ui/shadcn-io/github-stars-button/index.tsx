@@ -48,6 +48,7 @@ function GitHubStarsButton({
   transition = { stiffness: 90, damping: 50 },
   formatted = false,
   className,
+  href: customHref,
   ...props
 }: GitHubStarsButtonProps) {
   const motionVal = useMotionValue(0);
@@ -60,9 +61,9 @@ function GitHubStarsButton({
   const [displayParticles, setDisplayParticles] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
 
-  const repoUrl = useMemo(
-    () => `https://github.com/${username}/${repo}`,
-    [username, repo],
+  const url = useMemo(
+    () => customHref || `https://github.com/${username}/${repo}`,
+    [username, repo, customHref],
   );
 
   useEffect(() => {
@@ -133,16 +134,16 @@ function GitHubStarsButton({
     (e: React.MouseEvent<HTMLAnchorElement>) => {
       e.preventDefault();
       handleDisplayParticles();
-      setTimeout(() => window.open(repoUrl, '_blank'), 500);
+      setTimeout(() => window.open(url, '_blank'), 500);
     },
-    [handleDisplayParticles, repoUrl],
+    [handleDisplayParticles, url],
   );
 
   if (isLoading) return null;
 
   return (
     <motion.a
-      href={repoUrl}
+      href={url}
       rel="noopener noreferrer"
       target="_blank"
       whileTap={{ scale: 0.95 }}

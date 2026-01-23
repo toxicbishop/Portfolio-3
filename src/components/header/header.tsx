@@ -60,6 +60,7 @@ const Header = ({ loader }: HeaderProps) => {
           <GitHubStarsButton
             username={config.githubUsername}
             repo={config.githubRepo}
+            href={`https://github.com/${config.githubUsername}`}
             className="mr-4"
           />
         )}
