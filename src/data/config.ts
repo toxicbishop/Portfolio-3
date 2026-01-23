@@ -20,7 +20,7 @@ const config = {
     "Spline",
     "Framer Motion",
   ],
-  author: "Pranav",
+  author: "Pranav Arun",
   email: "pranavarun19@gmail.com",
   site: "https://pranav-portfolio.vercel.app",
 

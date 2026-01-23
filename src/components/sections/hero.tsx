@@ -56,7 +56,7 @@ const HeroSection = () => {
                         )}
                       >
                         {config.author.split(" ")[0]}
-                        <br className="md:block hiidden" />
+                        <br />
                         {config.author.split(" ")[1]}
                       </h1>
                     </TooltipTrigger>
