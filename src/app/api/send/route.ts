@@ -12,8 +12,16 @@ const Email = z.object({
 });
 export async function POST(req: Request) {
   try {
-    const resend = new Resend(process.env.RESEND_API_KEY);
     const body = await req.json();
+    // Simulate success if using the placeholder key
+    if (process.env.RESEND_API_KEY === "re_123456789") {
+      // Wait 1 second to simulate network delay
+      await new Promise((resolve) => setTimeout(resolve, 1000));
+      console.log("Mock email sent successfully:", body);
+      return Response.json({ id: "mock_email_id" });
+    }
+
+    const resend = new Resend(process.env.RESEND_API_KEY);
     console.log(body);
     const {
       success: zodSuccess,

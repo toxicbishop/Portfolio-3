@@ -26,7 +26,7 @@ const config = {
 
   // for github stars button
   githubUsername: "toxicbishop",
-  githubRepo: "Pranav-Full-Stack-Portfolio",
+  githubRepo: "DSA-with-tsx",
 
   get ogImg() {
     return this.site + "/assets/seo/og-image.png";
