@@ -379,54 +379,6 @@ const projects: Project[] = [
       );
     },
   },
-  {
-    id: "ascii-art",
-    category: "Tool",
-    title: "ASCII Art",
-    src: "/assets/projects-screenshots/portfolio/landing.png", // Fallback
-    screenshots: [],
-    skills: {
-      frontend: [PROJECT_SKILLS.python, PROJECT_SKILLS.js],
-      backend: [],
-    },
-    live: "#",
-    github: "https://github.com/toxicbishop/Assci-Art",
-    get content() {
-      return (
-        <div>
-          <TypographyP className="font-mono ">
-            Convert your favorite images or text into stunning ASCII art. A simple and fun tool to create retro-style graphics for terminal or web display.
-          </TypographyP>
-          <ProjectsLinks live={this.live} repo={this.github} />
-          <SlideShow images={[`${BASE_PATH}/projects-screenshots/portfolio/landing.png`]} />
-        </div>
-      );
-    },
-  },
-  {
-    id: "mom-health-tracker",
-    category: "Health",
-    title: "Mom Health Tracker App",
-    src: "/assets/projects-screenshots/portfolio/landing.png", // Fallback
-    screenshots: [],
-    skills: {
-      frontend: [PROJECT_SKILLS.react, PROJECT_SKILLS.tailwind, PROJECT_SKILLS.framerMotion],
-      backend: [PROJECT_SKILLS.firebase],
-    },
-    live: "#",
-    github: "https://github.com/toxicbishop/Mom-health-tracker",
-    get content() {
-      return (
-        <div>
-          <TypographyP className="font-mono ">
-            A personalized health tracking application designed for mothers. Track symptoms, moods, and daily health metrics with ease, all while keeping data securely synced.
-          </TypographyP>
-          <ProjectsLinks live={this.live} repo={this.github} />
-          <SlideShow images={[`${BASE_PATH}/projects-screenshots/portfolio/landing.png`]} />
-        </div>
-      );
-    },
-  },
 ];
 
 export default projects;
