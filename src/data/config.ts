@@ -37,7 +37,7 @@ const config = {
     instagram: "https://www.instagram.com/toxicbishop_/",
     facebook: "#",
     github: "https://github.com/toxicbishop",
-    resume: "https://drive.google.com/file/d/1O97WCk2DrO9x6SHOqf7LvRbmHkMgGIb4/view?usp=sharing",
+    resume: "/assets/resume.pdf",
   },
 };
 export { config };
