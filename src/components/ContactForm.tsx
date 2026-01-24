@@ -34,7 +34,8 @@ const ContactForm = () => {
         }),
       });
       const data = await res.json();
-      if (data.error) throw new Error(data.error);
+      if (!res.ok) throw new Error(data.error || "Something went wrong!");
+      
       toast({
         title: "Thank you!",
         description: "I'll get back to you as soon as possible.",
@@ -49,10 +50,10 @@ const ContactForm = () => {
         router.push("/");
         clearTimeout(timer);
       }, 1000);
-    } catch (err) {
+    } catch (err: any) {
       toast({
-        title: "Error",
-        description: "Something went wrong! Please check the fields.",
+        title: "Action failed",
+        description: err.message || "Please check the fields and try again.",
         className: cn(
           "top-0 w-full flex justify-center fixed md:max-w-7xl md:top-4 md:right-4"
         ),
