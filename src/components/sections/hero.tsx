@@ -27,9 +27,8 @@ const HeroSection = () => {
             "h-[calc(100dvh-3rem)] md:h-[calc(100dvh-4rem)] z-[2]",
             "col-span-1",
             "flex flex-col justify-start md:justify-center items-center md:items-start",
-            "pt-28 sm:pb-16 md:p-20 lg:p-24 xl:p-28"
-          )}
-        >
+            "pt-28 sm:pb-16 md:p-20 lg:p-24 xl:p-28",
+          )}>
           {!isLoading && (
             <div className="flex flex-col">
               <div>
@@ -37,9 +36,8 @@ const HeroSection = () => {
                   <p
                     className={cn(
                       "md:self-start mt-4 font-thin text-md text-slate-500 dark:text-zinc-400",
-                      "cursor-default font-display sm:text-xl md:text-xl whitespace-nowrap bg-clip-text "
-                    )}
-                  >
+                      "cursor-default font-display sm:text-xl md:text-xl whitespace-nowrap bg-clip-text ",
+                    )}>
                     Hi, I am
                     <br className="md:hidden" />
                   </p>
@@ -52,9 +50,8 @@ const HeroSection = () => {
                         className={cn(
                           "-ml-[6px] leading-none font-thin text-transparent text-slate-800 text-left",
                           "font-thin text-7xl md:text-7xl lg:text-8xl xl:text-9xl",
-                          "cursor-default text-edge-outline font-display "
-                        )}
-                      >
+                          "cursor-default text-edge-outline font-display ",
+                        )}>
                         {config.author.split(" ")[0]}
                         <br />
                         {config.author.split(" ")[1]}
@@ -62,8 +59,7 @@ const HeroSection = () => {
                     </TooltipTrigger>
                     <TooltipContent
                       side="top"
-                      className="dark:bg-white dark:text-black"
-                    >
+                      className="dark:bg-white dark:text-black">
                       theres something waiting for you in devtools
                     </TooltipContent>
                   </Tooltip>
@@ -73,34 +69,31 @@ const HeroSection = () => {
                   <p
                     className={cn(
                       "md:self-start md:mt-4 font-thin text-md text-slate-500 dark:text-zinc-400",
-                      "cursor-default font-display sm:text-xl md:text-xl whitespace-nowrap bg-clip-text "
-                    )}
-                  >
+                      "cursor-default font-display sm:text-xl md:text-xl whitespace-nowrap bg-clip-text ",
+                    )}>
                     A Full Stack Web Developer
                   </p>
                 </BlurIn>
               </div>
               <div className="mt-8 flex flex-col gap-3 w-fit">
-                <Link
+                <a
                   href={config.social.resume}
                   target="_blank"
-                  className="flex-1"
-                >
-                  <BoxReveal delay={2} width="100%" >
+                  className="flex-1">
+                  <BoxReveal delay={2} width="100%">
                     <Button className="flex items-center gap-2 w-full">
                       <File size={24} />
                       <p>Resume</p>
                     </Button>
                   </BoxReveal>
-                </Link>
+                </a>
                 <div className="md:self-start flex gap-3">
                   <Tooltip delayDuration={300}>
                     <TooltipTrigger asChild>
                       <Link href={"#contact"}>
                         <Button
                           variant={"outline"}
-                          className="block w-full overflow-hidden"
-                        >
+                          className="block w-full overflow-hidden">
                           Hire Me
                         </Button>
                       </Link>
@@ -110,10 +103,7 @@ const HeroSection = () => {
                     </TooltipContent>
                   </Tooltip>
                   <div className="flex items-center h-full gap-2">
-                    <Link
-                      href={config.social.twitter}
-                      target="_blank"
-                    >
+                    <Link href={config.social.twitter} target="_blank">
                       <Button variant={"outline"}>
                         <SiX size={24} />
                       </Button>
@@ -121,8 +111,7 @@ const HeroSection = () => {
                     <Link
                       href={config.social.github}
                       target="_blank"
-                      className="cursor-can-hover"
-                    >
+                      className="cursor-can-hover">
                       <Button variant={"outline"}>
                         <SiGithub size={24} />
                       </Button>
@@ -130,8 +119,7 @@ const HeroSection = () => {
                     <Link
                       href={config.social.linkedin}
                       target="_blank"
-                      className="cursor-can-hover"
-                    >
+                      className="cursor-can-hover">
                       <Button variant={"outline"}>
                         <SiLinkedin size={24} />
                       </Button>

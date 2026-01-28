@@ -17,12 +17,23 @@ function Footer() {
         {footer.map((link, index) => {
           const { title, href } = link;
 
+          if (href.endsWith(".pdf")) {
+            return (
+              <a
+                className="text-xs underline-offset-4 hover:underline"
+                href={href}
+                key={`l_${index}`}
+                target="_blank">
+                <Button variant={"link"}>{title}</Button>
+              </a>
+            );
+          }
+
           return (
             <Link
               className="text-xs underline-offset-4 hover:underline"
               href={href}
-              key={`l_${index}`}
-            >
+              key={`l_${index}`}>
               <Button variant={"link"}>{title}</Button>
             </Link>
           );
