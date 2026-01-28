@@ -49,7 +49,7 @@ const HeroSection = () => {
                       <h1
                         className={cn(
                           "-ml-[6px] leading-none font-thin text-transparent text-slate-800 text-left",
-                          "font-thin text-7xl md:text-7xl lg:text-8xl xl:text-9xl",
+                          "font-thin text-5xl sm:text-7xl md:text-7xl lg:text-8xl xl:text-9xl",
                           "cursor-default text-edge-outline font-display ",
                         )}>
                         {config.author.split(" ")[0]}
