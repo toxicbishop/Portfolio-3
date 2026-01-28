@@ -90,7 +90,7 @@ const HeroSection = () => {
                 <div className="md:self-start flex gap-3">
                   <Tooltip delayDuration={300}>
                     <TooltipTrigger asChild>
-                      <Link href={"#contact"}>
+                      <Link href={"/contact"}>
                         <Button
                           variant={"outline"}
                           className="block w-full overflow-hidden">

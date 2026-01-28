@@ -30,8 +30,8 @@ export default function Body({
   const [currentHref, setCurrentHref] = useState("/");
   useEffect(() => {
     if (typeof window === "undefined") return;
-    const { pathname, hash } = window.location;
-    setCurrentHref(pathname + hash);
+    const { pathname } = window.location;
+    setCurrentHref(pathname);
   }, [params]);
 
   const getChars = (word: string) => {
@@ -45,10 +45,9 @@ export default function Body({
           initial="initial"
           animate="enter"
           exit="exit"
-          key={char + i}
-        >
+          key={char + i}>
           {char}
-        </motion.span>
+        </motion.span>,
       );
     });
     return chars;
@@ -65,12 +64,11 @@ export default function Body({
             key={`l_${index}`}
             href={href}
             target={target}
-            className="cursor-can-hover rounded-lg"
-          >
+            className="cursor-can-hover rounded-lg">
             <motion.p
               className={cn(
                 "rounded-lg",
-                currentHref !== href ? "text-muted-foreground" : "underline"
+                currentHref !== href ? "text-muted-foreground" : "underline",
               )}
               onClick={() => setIsActive(false)}
               onMouseOver={() => setSelectedLink({ isActive: true, index })}
@@ -80,8 +78,7 @@ export default function Body({
                 selectedLink.isActive && selectedLink.index !== index
                   ? "open"
                   : "closed"
-              }
-            >
+              }>
               {getChars(title)}
             </motion.p>
           </Link>
