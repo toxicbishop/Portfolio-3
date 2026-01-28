@@ -9,8 +9,8 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 const EducationSection = () => {
   return (
     <SectionWrapper
-      className="flex flex-col items-center justify-center py-20 z-10"
-    >
+      id="education"
+      className="flex flex-col items-center justify-center py-20 z-10">
       <div className="w-full max-w-4xl px-4 md:px-8 mx-auto">
         <SectionHeader
           id="education"
@@ -49,15 +49,13 @@ const EducationCard = ({
         delay: index * 0.1,
         ease: "easeOut",
       }}
-      viewport={{ once: true, margin: "-50px" }}
-    >
+      viewport={{ once: true, margin: "-50px" }}>
       <Card
         className={cn(
           "bg-card text-card-foreground border-border",
           "hover:border-primary/20 transition-colors duration-300",
-          "shadow-sm hover:shadow-md"
-        )}
-      >
+          "shadow-sm hover:shadow-md",
+        )}>
         <CardHeader className="pb-3">
           <div className="flex flex-col md:flex-row md:items-start justify-between gap-4">
             <div className="space-y-1">
@@ -68,7 +66,9 @@ const EducationCard = ({
                 {education.school}
               </div>
             </div>
-            <Badge variant="secondary" className="w-fit font-mono text-xs font-normal">
+            <Badge
+              variant="secondary"
+              className="w-fit font-mono text-xs font-normal">
               {education.startDate} - {education.endDate}
             </Badge>
           </div>
