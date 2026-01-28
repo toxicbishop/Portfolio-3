@@ -38,8 +38,7 @@ const ProjectsLinks = ({ live, repo }: { live: string; repo?: string }) => {
           className="font-mono underline flex gap-2"
           rel="noopener"
           target="_new"
-          href={live}
-        >
+          href={live}>
           <Button variant={"default"} size={"sm"}>
             Visit Website
             <ArrowUpRight className="ml-3 w-5 h-5" />
@@ -51,8 +50,7 @@ const ProjectsLinks = ({ live, repo }: { live: string; repo?: string }) => {
           className="font-mono underline flex gap-2"
           rel="noopener"
           target="_new"
-          href={repo}
-        >
+          href={repo}>
           <Button variant={"default"} size={"sm"}>
             Github
             <ArrowUpRight className="ml-3 w-5 h-5" />
@@ -227,14 +225,14 @@ const projects: Project[] = [
   {
     id: "slot-machine-v3",
     category: "Game",
-    title: "Slot Machine V3",
+    title: "Slot Machine",
     src: "/assets/projects/Slotmachine.png",
     screenshots: ["Slotmachine.png"],
     skills: {
       frontend: [PROJECT_SKILLS.python],
       backend: [],
     },
-    live: "#",
+    live: "https://github.com/toxicbishop/Slot-Machine",
     github: "https://github.com/toxicbishop/Slot_machine_version_3",
     get content() {
       return (
@@ -243,7 +241,9 @@ const projects: Project[] = [
             Jackpot Awaits!
           </TypographyP>
           <TypographyP className="font-mono ">
-            An exciting Slot Machine game developed in Python. Features include game state persistence (save/load), auto-spin mechanism, transaction history, and daily rewards.
+            An exciting Slot Machine game developed in Python. Features include
+            game state persistence (save/load), auto-spin mechanism, transaction
+            history, and daily rewards.
           </TypographyP>
           <ProjectsLinks live={this.live} repo={this.github} />
           <SlideShow images={[`${BASE_PATH}/projects/Slotmachine.png`]} />
@@ -275,7 +275,9 @@ const projects: Project[] = [
             Master Data Structures & Algorithms
           </TypographyP>
           <TypographyP className="font-mono ">
-            DSA Study Hub is an interactive platform built to help students and developers master Data Structures and Algorithms. It features clean code snippets, complexity analysis, and interactive visualizations.
+            DSA Study Hub is an interactive platform built to help students and
+            developers master Data Structures and Algorithms. It features clean
+            code snippets, complexity analysis, and interactive visualizations.
           </TypographyP>
           <ProjectsLinks live={this.live} repo={this.github} />
           <SlideShow images={[`${BASE_PATH}/projects/DSA-Website-Photo.png`]} />
@@ -290,19 +292,27 @@ const projects: Project[] = [
     src: "/assets/projects/costoflivingbenagluru.jpeg",
     screenshots: ["costoflivingbenagluru.jpeg"],
     skills: {
-      frontend: [PROJECT_SKILLS.js, PROJECT_SKILLS.react, PROJECT_SKILLS.tailwind],
+      frontend: [
+        PROJECT_SKILLS.js,
+        PROJECT_SKILLS.react,
+        PROJECT_SKILLS.tailwind,
+      ],
       backend: [PROJECT_SKILLS.node, PROJECT_SKILLS.express],
     },
-    live: "#",
+    live: "https://github.com/Mohammed0572/bengaluru-cost-explorer",
     github: "https://github.com/Mohammed0572/bengaluru-cost-explorer",
     get content() {
       return (
         <div>
           <TypographyP className="font-mono ">
-            An insightful explorer that visualizes the cost of living in various areas of Bengaluru. Helping people make informed decisions about relocation and budgeting in the Garden City.
+            An insightful explorer that visualizes the cost of living in various
+            areas of Bengaluru. Helping people make informed decisions about
+            relocation and budgeting in the Garden City.
           </TypographyP>
           <ProjectsLinks live={this.live} repo={this.github} />
-          <SlideShow images={[`${BASE_PATH}/projects/costoflivingbenagluru.jpeg`]} />
+          <SlideShow
+            images={[`${BASE_PATH}/projects/costoflivingbenagluru.jpeg`]}
+          />
         </div>
       );
     },
@@ -317,13 +327,15 @@ const projects: Project[] = [
       frontend: [PROJECT_SKILLS.python],
       backend: [PROJECT_SKILLS.express], // Using Python and SQL
     },
-    live: "#",
+    live: "https://github.com/toxicbishop/Student-GUI-With-SQL",
     github: "https://github.com/toxicbishop/Student-GUI-With-SQL",
     get content() {
       return (
         <div>
           <TypographyP className="font-mono ">
-            A robust GUI application designed for educational institutions to manage student records and marks. It uses SQL for reliable data storage and Python for an intuitive user interface.
+            A robust GUI application designed for educational institutions to
+            manage student records and marks. It uses SQL for reliable data
+            storage and Python for an intuitive user interface.
           </TypographyP>
           <ProjectsLinks live={this.live} repo={this.github} />
           <SlideShow images={[`${BASE_PATH}/projects/SMS-Pro.png`]} />
@@ -338,16 +350,22 @@ const projects: Project[] = [
     src: "/assets/projects/pokemon.png",
     screenshots: ["pokemon.png"],
     skills: {
-      frontend: [PROJECT_SKILLS.js, PROJECT_SKILLS.react, PROJECT_SKILLS.chakra],
+      frontend: [
+        PROJECT_SKILLS.js,
+        PROJECT_SKILLS.react,
+        PROJECT_SKILLS.chakra,
+      ],
       backend: [],
     },
-    live: "#",
+    live: "https://github.com/toxicbishop/PokeAPI-Data-Fetcher",
     github: "https://github.com/toxicbishop/PokeAPI-Data-Fetcher",
     get content() {
       return (
         <div>
           <TypographyP className="font-mono ">
-            A fun project that fetches and displays detailed information about Pokémon using the PokeAPI. Search for your favorite Pokémon and see their stats, types, and abilities!
+            A fun project that fetches and displays detailed information about
+            Pokémon using the PokeAPI. Search for your favorite Pokémon and see
+            their stats, types, and abilities!
           </TypographyP>
           <ProjectsLinks live={this.live} repo={this.github} />
           <SlideShow images={[`${BASE_PATH}/projects/pokemon.png`]} />
@@ -365,16 +383,20 @@ const projects: Project[] = [
       frontend: [PROJECT_SKILLS.python],
       backend: [],
     },
-    live: "#",
+    live: "https://github.com/toxicbishop/Music-with-python",
     github: "https://github.com/toxicbishop/Music-with-python",
     get content() {
       return (
         <div>
           <TypographyP className="font-mono ">
-            A sleek desktop music player built with Python. Supports all major audio formats and features an easy-to-use interface for managing your local music library.
+            A sleek desktop music player built with Python. Supports all major
+            audio formats and features an easy-to-use interface for managing
+            your local music library.
           </TypographyP>
           <ProjectsLinks live={this.live} repo={this.github} />
-          <SlideShow images={[`${BASE_PATH}/projects/Music-Player-Photo.png`]} />
+          <SlideShow
+            images={[`${BASE_PATH}/projects/Music-Player-Photo.png`]}
+          />
         </div>
       );
     },
