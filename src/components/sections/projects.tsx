@@ -21,7 +21,7 @@ import SectionWrapper from "../ui/section-wrapper";
 const ProjectsSection = () => {
   return (
     <SectionWrapper id="projects" className="max-w-7xl mx-auto md:h-[130vh]">
-      <SectionHeader id='projects' title="Projects" />
+      <SectionHeader id="projects" title="Projects" />
       <div className="grid grid-cols-1 md:grid-cols-3">
         {projects.map((project, index) => (
           <Modall key={project.src} project={project} />
@@ -37,8 +37,7 @@ const Modall = ({ project }: { project: Project }) => {
         <ModalTrigger className="bg-transparent flex justify-center group/modal-btn">
           <div
             className="relative w-[400px] h-auto rounded-lg overflow-hidden"
-            style={{ aspectRatio: "3/2" }}
-          >
+            style={{ aspectRatio: "3/2" }}>
             <Image
               className="absolute w-full h-full top-0 left-0 hover:scale-[1.05] transition-all"
               src={project.src}
@@ -66,11 +65,13 @@ const Modall = ({ project }: { project: Project }) => {
             <button className="px-2 py-1 bg-gray-200 text-black dark:bg-black dark:border-black dark:text-white border border-gray-300 rounded-md text-sm w-28">
               Cancel
             </button>
-            <Link href={project.live} target="_blank">
-              <button className="bg-black text-white dark:bg-white dark:text-black text-sm px-2 py-1 rounded-md border border-black w-28">
-                Visit
-              </button>
-            </Link>
+            {project.live && project.live !== "#" && (
+              <Link href={project.live} target="_blank">
+                <button className="bg-black text-white dark:bg-white dark:text-black text-sm px-2 py-1 rounded-md border border-black w-28">
+                  Visit
+                </button>
+              </Link>
+            )}
           </ModalFooter>
         </ModalBody>
       </Modal>

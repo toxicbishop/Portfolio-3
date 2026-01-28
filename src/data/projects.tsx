@@ -232,7 +232,7 @@ const projects: Project[] = [
       frontend: [PROJECT_SKILLS.python],
       backend: [],
     },
-    live: "https://github.com/toxicbishop/Slot-Machine",
+    live: "#",
     github: "https://github.com/toxicbishop/Slot_machine_version_3",
     get content() {
       return (
@@ -299,7 +299,7 @@ const projects: Project[] = [
       ],
       backend: [PROJECT_SKILLS.node, PROJECT_SKILLS.express],
     },
-    live: "https://github.com/Mohammed0572/bengaluru-cost-explorer",
+    live: "#",
     github: "https://github.com/Mohammed0572/bengaluru-cost-explorer",
     get content() {
       return (
@@ -327,7 +327,7 @@ const projects: Project[] = [
       frontend: [PROJECT_SKILLS.python],
       backend: [PROJECT_SKILLS.express], // Using Python and SQL
     },
-    live: "https://github.com/toxicbishop/Student-GUI-With-SQL",
+    live: "#",
     github: "https://github.com/toxicbishop/Student-GUI-With-SQL",
     get content() {
       return (
@@ -357,7 +357,7 @@ const projects: Project[] = [
       ],
       backend: [],
     },
-    live: "https://github.com/toxicbishop/PokeAPI-Data-Fetcher",
+    live: "#",
     github: "https://github.com/toxicbishop/PokeAPI-Data-Fetcher",
     get content() {
       return (
@@ -383,7 +383,7 @@ const projects: Project[] = [
       frontend: [PROJECT_SKILLS.python],
       backend: [],
     },
-    live: "https://github.com/toxicbishop/Music-with-python",
+    live: "#",
     github: "https://github.com/toxicbishop/Music-with-python",
     get content() {
       return (
