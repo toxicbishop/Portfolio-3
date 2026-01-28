@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
-import React from "react";
+import React, { useState, useMemo } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import {
   Modal,
   ModalBody,
@@ -30,36 +31,91 @@ const CancelButton = () => {
   );
 };
 
+// Get unique categories from projects
+const categories = [
+  "All",
+  ...Array.from(new Set(projects.map((p) => p.category))),
+];
+
 const ProjectsSection = () => {
+  const [activeCategory, setActiveCategory] = useState("All");
+
+  const filteredProjects = useMemo(() => {
+    if (activeCategory === "All") return projects;
+    return projects.filter((p) => p.category === activeCategory);
+  }, [activeCategory]);
+
   return (
-    <SectionWrapper id="projects" className="max-w-7xl mx-auto md:h-[130vh]">
+    <SectionWrapper
+      id="projects"
+      className="max-w-7xl mx-auto md:min-h-[100vh]">
       <SectionHeader id="projects" title="Projects" />
-      <div className="grid grid-cols-1 md:grid-cols-3">
-        {projects.map((project, index) => (
-          <Modall key={project.src} project={project} />
+
+      {/* Category Filter */}
+      <div className="flex flex-wrap justify-center gap-2 mb-8 px-4">
+        {categories.map((category) => (
+          <button
+            key={category}
+            onClick={() => setActiveCategory(category)}
+            className={cn(
+              "px-4 py-2 rounded-full text-sm font-medium transition-all duration-300",
+              activeCategory === category
+                ? "bg-primary text-primary-foreground shadow-lg scale-105"
+                : "bg-muted hover:bg-muted/80 text-muted-foreground hover:scale-105",
+            )}>
+            {category}
+          </button>
         ))}
       </div>
+
+      {/* Projects Grid with Animation */}
+      <motion.div className="grid grid-cols-1 md:grid-cols-3 gap-4" layout>
+        <AnimatePresence mode="popLayout">
+          {filteredProjects.map((project) => (
+            <motion.div
+              key={project.id}
+              layout
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.8 }}
+              transition={{ duration: 0.3 }}>
+              <Modall project={project} />
+            </motion.div>
+          ))}
+        </AnimatePresence>
+      </motion.div>
+
+      {/* No results message */}
+      {filteredProjects.length === 0 && (
+        <div className="text-center py-12 text-muted-foreground">
+          No projects found in this category.
+        </div>
+      )}
     </SectionWrapper>
   );
 };
+
 const Modall = ({ project }: { project: Project }) => {
   return (
     <div className="flex items-center justify-center">
       <Modal>
-        <ModalTrigger className="bg-transparent flex justify-center group/modal-btn">
+        <ModalTrigger className="bg-transparent flex justify-center group/modal-btn w-full">
           <div
-            className="relative w-[400px] h-auto rounded-lg overflow-hidden"
+            className="relative w-full max-w-[400px] h-auto rounded-lg overflow-hidden"
             style={{ aspectRatio: "3/2" }}>
             <Image
-              className="absolute w-full h-full top-0 left-0 hover:scale-[1.05] transition-all"
+              className="absolute w-full h-full top-0 left-0 hover:scale-[1.05] transition-all object-cover"
               src={project.src}
               alt={project.title}
-              width={300}
-              height={300}
+              width={400}
+              height={267}
+              loading="lazy"
             />
             <div className="absolute w-full h-1/2 bottom-0 left-0 bg-gradient-to-t from-black via-black/85 to-transparent pointer-events-none">
               <div className="flex flex-col h-full items-start justify-end p-6">
-                <div className="text-lg text-left">{project.title}</div>
+                <div className="text-lg text-left text-white">
+                  {project.title}
+                </div>
                 <div className="text-xs bg-white text-black rounded-lg w-fit px-2">
                   {project.category}
                 </div>
@@ -88,6 +144,7 @@ const Modall = ({ project }: { project: Project }) => {
     </div>
   );
 };
+
 export default ProjectsSection;
 
 const ProjectContents = ({ project }: { project: Project }) => {
@@ -114,35 +171,6 @@ const ProjectContents = ({ project }: { project: Project }) => {
           </div>
         )}
       </div>
-      {/* <div className="flex justify-center items-center">
-        {project.screenshots.map((image, idx) => (
-          <motion.div
-            key={"images" + idx}
-            style={{
-              rotate: Math.random() * 20 - 10,
-            }}
-            whileHover={{
-              scale: 1.1,
-              rotate: 0,
-              zIndex: 100,
-            }}
-            whileTap={{
-              scale: 1.1,
-              rotate: 0,
-              zIndex: 100,
-            }}
-            className="rounded-xl -mr-4 mt-4 p-1 bg-white dark:bg-neutral-800 dark:border-neutral-700 border border-neutral-100 flex-shrink-0 overflow-hidden"
-          >
-            <Image
-              src={`${project.src.split("1.png")[0]}${image}`}
-              alt="screenshots"
-              width="500"
-              height="500"
-              className="rounded-lg h-20 w-20 md:h-40 md:w-40 object-cover flex-shrink-0"
-            />
-          </motion.div>
-        ))}
-      </div> */}
       {project.content}
     </>
   );

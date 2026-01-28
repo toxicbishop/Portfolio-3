@@ -8,6 +8,7 @@ import Footer from "@/components/footer/footer";
 import Script from "next/script";
 import AppOverlays from "@/components/app-overlays";
 import { Providers } from "@/components/providers";
+import BackToTop from "@/components/back-to-top";
 
 export const metadata: Metadata = {
   title: config.title,
@@ -51,27 +52,46 @@ const archivoBlack = Archivo_Black({
   variable: "--font-display",
 });
 
+// JSON-LD Structured Data for SEO
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: config.author,
+  url: config.site,
+  email: config.email,
+  jobTitle: "Full Stack Developer",
+  sameAs: [config.social.github, config.social.linkedin, config.social.twitter],
+  knowsAbout: ["Web Development", "React", "Next.js", "TypeScript", "Python"],
+};
+
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={[inter.variable, archivoBlack.variable, "font-display"].join(" ")} suppressHydrationWarning>
+    <html
+      lang="en"
+      className={[inter.variable, archivoBlack.variable, "font-display"].join(
+        " ",
+      )}
+      suppressHydrationWarning>
       <head>
         <Script
           defer
           src={process.env.UMAMI_DOMAIN}
-          data-website-id={process.env.UMAMI_SITE_ID}
-        ></Script>
-        {/* <Analytics /> */}
+          data-website-id={process.env.UMAMI_SITE_ID}></Script>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
       </head>
       <body>
         <Providers>
           <Header />
           {children}
-
           <Footer />
+          <BackToTop />
           <AppOverlays />
         </Providers>
       </body>
