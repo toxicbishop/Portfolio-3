@@ -1,16 +1,28 @@
 "use client";
 
-import React from "react";
+import React, { Suspense } from "react";
+import dynamic from "next/dynamic";
 import SmoothScroll from "@/components/smooth-scroll";
 import { cn } from "@/lib/utils";
-import AnimatedBackground from "@/components/animated-background";
 import SkillsSection from "@/components/sections/skills";
 import EducationSection from "@/components/sections/education";
 import ProjectsSection from "@/components/sections/projects";
 import ContactSection from "@/components/sections/contact";
 import HeroSection from "@/components/sections/hero";
+import ErrorBoundary from "@/components/error-boundary";
 
 import { usePathname } from "next/navigation";
+
+// Lazy load the heavy 3D animated background
+const AnimatedBackground = dynamic(
+  () => import("@/components/animated-background"),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="fixed inset-0 bg-gradient-to-b from-background to-background/80 -z-10" />
+    ),
+  },
+);
 
 function MainPage() {
   const pathname = usePathname();
@@ -36,7 +48,17 @@ function MainPage() {
 
   return (
     <SmoothScroll>
-      <AnimatedBackground />
+      <ErrorBoundary
+        fallback={
+          <div className="fixed inset-0 bg-gradient-to-b from-background to-background/80 -z-10" />
+        }>
+        <Suspense
+          fallback={
+            <div className="fixed inset-0 bg-gradient-to-b from-background to-background/80 -z-10" />
+          }>
+          <AnimatedBackground />
+        </Suspense>
+      </ErrorBoundary>
       <main
         className={cn("bg-slate-100 dark:bg-transparent canvas-overlay-mode")}>
         <HeroSection />
