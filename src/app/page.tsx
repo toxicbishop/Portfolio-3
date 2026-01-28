@@ -16,6 +16,11 @@ function MainPage() {
   const pathname = usePathname();
 
   React.useEffect(() => {
+    // Force scroll to top on refresh if not a section link
+    if ("scrollRestoration" in window.history) {
+      window.history.scrollRestoration = "manual";
+    }
+
     if (pathname && pathname !== "/") {
       const sectionId = pathname.substring(1);
       const element = document.getElementById(sectionId);
@@ -24,6 +29,8 @@ function MainPage() {
           element.scrollIntoView({ behavior: "smooth" });
         }, 100);
       }
+    } else {
+      window.scrollTo(0, 0);
     }
   }, [pathname]);
 
