@@ -1738,13 +1738,12 @@
       window.addEventListener("scroll", updateProgressBar);
       window.addEventListener("resize", updateProgressBar);
       updateProgressBar();
-
       // Custom Animated Cursor
       const cursorDot = document.querySelector("[data-cursor-dot]");
       const cursorOutline = document.querySelector("[data-cursor-outline]");
 
       // Only run cursor logic if on a device with a mouse (pointer: fine)
-      if (window.matchMedia("(pointer: fine)").matches) {
+      if (window.matchMedia("(pointer: fine)").matches && cursorDot && cursorOutline) {
         window.addEventListener("mousemove", function (e) {
           const posX = e.clientX;
           const posY = e.clientY;
@@ -1768,6 +1767,12 @@
             cursorOutline.classList.remove("cursor-hover");
           });
         });
+      } else {
+        // If no fine pointer or missing elements, ensure default cursor is restored
+        document.body.style.cursor = "auto";
+        const style = document.createElement('style');
+        style.innerHTML = 'html, body, a, button, .tag, .social-btn, .contact-card, .btn-cta, .btn-coffee, .nav-link, .nav-cta, .nav-brand, .hamburger, .theme-toggle-nav, .icon-link, .checkpoint, .footer-nav-compact a, .footer-social-compact a, .footer-terminal-link-compact, .collab-link { cursor: auto !important; }';
+        document.head.appendChild(style);
       }
     </script>
     
