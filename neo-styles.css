@@ -2913,6 +2913,51 @@ body[data-theme="dark"] .map-popup-company span {
   transition: all 0.3s ease;
 }
 
+.project-collaborators {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 2px dashed var(--border);
+}
+
+.collab-label {
+  font-family: "Space Mono", monospace;
+  font-size: 0.8rem;
+  font-weight: 600;
+  opacity: 0.7;
+}
+
+.collab-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.3rem 0.7rem;
+  background: var(--cyan);
+  border: 2px solid var(--border);
+  font-family: "Space Mono", monospace;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text);
+  text-decoration: none;
+  box-shadow: 2px 2px 0 var(--border);
+  transition: all 0.2s ease;
+}
+
+.collab-link:hover {
+  transform: translate(2px, 2px);
+  box-shadow: 0 0 0 var(--border);
+  background: var(--yellow);
+}
+
+.project-card:nth-child(1) { border-top: 6px solid var(--cyan); }
+.project-card:nth-child(2) { border-top: 6px solid var(--yellow); }
+.project-card:nth-child(3) { border-top: 6px solid var(--pink); }
+.project-card:nth-child(4) { border-top: 6px solid var(--accent); }
+.project-card:nth-child(5) { border-top: 6px solid var(--cyan); }
+
 /* Contact Section - Sticky Notes */
 .contact-container-compact {
   max-width: 900px;
