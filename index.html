@@ -1738,46 +1738,6 @@
       window.addEventListener("scroll", updateProgressBar);
       window.addEventListener("resize", updateProgressBar);
       updateProgressBar();
-      // Custom Animated Cursor
-      const cursorDot = document.querySelector("[data-cursor-dot]");
-      const cursorOutline = document.querySelector("[data-cursor-outline]");
-
-      // Only run cursor logic if on a device with a mouse (pointer: fine)
-      if (window.matchMedia("(pointer: fine)").matches && cursorDot && cursorOutline) {
-        window.addEventListener("mousemove", function (e) {
-          const posX = e.clientX;
-          const posY = e.clientY;
-
-          cursorDot.style.left = `${posX}px`;
-          cursorDot.style.top = `${posY}px`;
-
-          cursorOutline.animate({
-            left: `${posX}px`,
-            top: `${posY}px`
-          }, { duration: 500, fill: "forwards" });
-        });
-
-        const interactiveElements = document.querySelectorAll("a, button, .tag, .social-btn, .contact-card, .btn-cta, .btn-coffee, .nav-link, .nav-cta, .nav-brand, .hamburger, .theme-toggle-nav, .icon-link, .checkpoint, .collab-link");
-        
-        interactiveElements.forEach(el => {
-          el.addEventListener("mouseenter", () => {
-            cursorOutline.classList.add("cursor-hover");
-          });
-          el.addEventListener("mouseleave", () => {
-            cursorOutline.classList.remove("cursor-hover");
-          });
-        });
-      } else {
-        // If no fine pointer or missing elements, ensure default cursor is restored
-        document.body.style.cursor = "auto";
-        const style = document.createElement('style');
-        style.innerHTML = 'html, body, a, button, .tag, .social-btn, .contact-card, .btn-cta, .btn-coffee, .nav-link, .nav-cta, .nav-brand, .hamburger, .theme-toggle-nav, .icon-link, .checkpoint, .footer-nav-compact a, .footer-social-compact a, .footer-terminal-link-compact, .collab-link { cursor: auto !important; }';
-        document.head.appendChild(style);
-      }
     </script>
-    
-    <!-- Custom Cursor Elements -->
-    <div class="cursor-dot" data-cursor-dot></div>
-    <div class="cursor-outline" data-cursor-outline></div>
   </body>
 </html>
