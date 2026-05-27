@@ -2952,12 +2952,23 @@ body[data-theme="dark"] .map-popup-company span {
   background: var(--yellow);
 }
 
+.project-card .tag:hover {
+  transform: translate(3px, 3px);
+  box-shadow: 0 0 0 var(--border);
+}
+
 .project-card:nth-child(1) { border-top: 6px solid var(--cyan); }
+.project-card:nth-child(1) .tag:hover { background: var(--cyan); }
 .project-card:nth-child(2) { border-top: 6px solid var(--yellow); }
+.project-card:nth-child(2) .tag:hover { background: var(--yellow); }
 .project-card:nth-child(3) { border-top: 6px solid var(--pink); }
+.project-card:nth-child(3) .tag:hover { background: var(--pink); }
 .project-card:nth-child(4) { border-top: 6px solid var(--accent); }
+.project-card:nth-child(4) .tag:hover { background: var(--accent); }
 .project-card:nth-child(5) { border-top: 6px solid var(--cyan); }
+.project-card:nth-child(5) .tag:hover { background: var(--cyan); }
 .project-card:nth-child(6) { border-top: 6px solid var(--yellow); }
+.project-card:nth-child(6) .tag:hover { background: var(--yellow); }
 
 /* Contact Section - Sticky Notes */
 .contact-container-compact {
