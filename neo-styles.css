@@ -2969,6 +2969,12 @@ body[data-theme="dark"] .map-popup-company span {
 .project-card:nth-child(5) .tag:hover { background: var(--cyan); }
 .project-card:nth-child(6) { border-top: 6px solid var(--yellow); }
 .project-card:nth-child(6) .tag:hover { background: var(--yellow); }
+.project-card:nth-child(7) { border-top: 6px solid var(--pink); }
+.project-card:nth-child(7) .tag:hover { background: var(--pink); }
+.project-card:nth-child(8) { border-top: 6px solid var(--accent); }
+.project-card:nth-child(8) .tag:hover { background: var(--accent); }
+.project-card:nth-child(9) { border-top: 6px solid var(--cyan); }
+.project-card:nth-child(9) .tag:hover { background: var(--cyan); }
 
 /* Contact Section - Sticky Notes */
 .contact-container-compact {
