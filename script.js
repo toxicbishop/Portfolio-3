@@ -1071,13 +1071,31 @@ ${this.wrapWithColor("⚡ Repo:", "#ff8c00")} ${this.wrapWithColor(
   loadProjects() {
     this.projects = [
       {
+        title: "Student Stock Market Analysis",
+        description:
+          "A real-time virtual stock market simulator and analysis platform for students, built with Next.js, Prisma, Firebase, and Gemini AI. Developed at Electrohack 3.0 National Level Hackathon at K.S. Institute of Technology (March 14, 2026).",
+        image: "",
+        technologies: ["Next.js", "Prisma", "Firebase", "Gemini AI", "TypeScript"],
+        demo: "",
+        repo: "https://github.com/toxicbishop/Student-Stock-Market-Analysis",
+      },
+      {
+        title: "Neotic",
+        description:
+          "An enterprise-grade AI reasoning platform that bridges the gap between complex Chain-of-Thought (CoT) processes and user understanding by visualizing internal analytical steps as a dynamic Directed Acyclic Graph (DAG). Developed by Team Neotic at HIRE-4-THON (2026).",
+        image: "",
+        technologies: ["AI Reasoning", "Chain-of-Thought", "DAG Visualization", "Next.js", "AI & DS"],
+        demo: "",
+        repo: "https://github.com/memer0/Neotic",
+      },
+      {
         title: "DSA Study Hub",
         description:
           "An interactive platform for learning Data Structures and Algorithms with visualizations, practice problems, and comprehensive study materials.",
         image: "",
         technologies: ["TypeScript", "React", "Next.js", "Tailwind CSS"],
         demo: "https://dsa-study-hub.vercel.app/",
-        repo: "https://github.com/toxicbishop/DSA-with-tsx",
+        repo: "https://github.com/toxicbishop/DSA-Study-Hub",
       },
     ];
   }
@@ -1108,12 +1126,26 @@ ${this.wrapWithColor("⚡ Repo:", "#ff8c00")} ${this.wrapWithColor(
       resume: {
         type: "directory",
         contents: {
-          "about.txt": { type: "file", content: "About me..." },
+          "about.txt": { type: "file", content: "About Pranav Arun..." },
           "skills.md": { type: "file", content: "# Skills..." },
+          "hackathons.md": {
+            type: "file",
+            content:
+              "# Hackathons & Competitions\n\n1. Electrohack 3.0 (March 14, 2026, KSIT)\n   - Project: Student Stock Market Analysis (https://github.com/toxicbishop/Student-Stock-Market-Analysis)\n   - Team: Mithil (@mit0506) & Supreeth (@supr1795)\n\n2. HIRE-4-THON (2026) 24-Hour National Level Hackathon (March 26–27, 2026, KSSEM Bengaluru)\n   - Organised by: Dept. of AI & DS with CSE, CS&BS, ECE, in collaboration with Dyashin & DSEdify\n   - Project: Neotic (https://github.com/memer0/Neotic)\n   - Team Neotic: Aryan (@memer0) & G Pavan Kumar (@abhintr2006)",
+          },
           projects: {
             type: "directory",
             contents: {
-              "project1.md": { type: "file", content: "Project 1 details..." },
+              "stock-market-analysis.md": {
+                type: "file",
+                content:
+                  "# Student Stock Market Analysis\nA real-time virtual stock market simulator and analysis platform for students, built with Next.js, Prisma, Firebase, and Gemini AI.\nRepo: https://github.com/toxicbishop/Student-Stock-Market-Analysis\nHackathon: Electrohack 3.0 at KSIT (March 14, 2026)\nCollaborators: Mithil (@mit0506), Supreeth (@supr1795)",
+              },
+              "neotic.md": {
+                type: "file",
+                content:
+                  "# Neotic\nAn enterprise-grade AI reasoning platform that bridges the gap between complex Chain-of-Thought (CoT) processes and user understanding by visualizing internal analytical steps as a dynamic Directed Acyclic Graph (DAG).\nRepo: https://github.com/memer0/Neotic\nHackathon: HIRE-4-THON 2026 24-Hour National Level Hackathon at K. S. School of Engineering & Management, Bengaluru (March 26–27, 2026)\nOrganizers: Dept. of AI & DS (with CSE, CS&BS, ECE) in collaboration with Dyashin & DSEdify\nTeam Neotic: Aryan (@memer0), G Pavan Kumar (@abhintr2006)",
+              },
             },
           },
         },
