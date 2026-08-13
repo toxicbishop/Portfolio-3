@@ -1007,6 +1007,14 @@ ${this.wrapWithColor("💼", "#ff8c00")}  ${this.wrapWithColor(
       "#ffffff",
     )}
 
+${this.wrapWithColor("💬", "#ff8c00")}  ${this.wrapWithColor(
+      "Discord:",
+      "#ff8c00",
+    )} ${this.wrapWithColor(
+      '<a href="https://discordapp.com/users/701732138269016064" target="_blank" style="color: #ffffff; text-decoration: none;">discord.com/users/701732138269016064</a>',
+      "#ffffff",
+    )}
+
 ${this.wrapWithColor("╭────────────────────────────────────────╮", "#ff8c00")}
 ${this.wrapWithColor("│", "#ff8c00")} ${this.wrapWithColor(
       "Feel free to reach out for opportunities!",
