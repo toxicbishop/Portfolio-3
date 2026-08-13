@@ -476,6 +476,9 @@ class TerminalResume {
       case "projects":
         this.showProjects();
         break;
+      case "hackathons":
+        this.showHackathons(outputElement);
+        break;
       case "skills-visual":
         this.showSkillsVisualization();
         break;
@@ -567,6 +570,9 @@ class TerminalResume {
       this.wrapWithColor("• experience", "#98fb98") +
       " " +
       this.wrapWithColor("Show my work history\n", "#ffffff") +
+      this.wrapWithColor("• hackathons", "#98fb98") +
+      " " +
+      this.wrapWithColor("View hackathons & achievements\n", "#ffffff") +
       this.wrapWithColor("• education", "#98fb98") +
       "  " +
       this.wrapWithColor("View my educational background\n", "#ffffff") +
@@ -822,6 +828,32 @@ ${this.wrapWithColor("2021 - 2023 | Bengaluru, Karnataka, India", "#ffffff")}`;
     const experienceDiv = document.createElement("div");
     experienceDiv.innerHTML = experience;
     outputElement.appendChild(experienceDiv);
+    this.scrollToBottom(outputElement.closest(".terminal-content"));
+  }
+
+  showHackathons(outputElement = this.output) {
+    const hackathons = `<span style="color: #ffd93d; font-weight: bold;">🏆 Hackathons & Competitions</span>
+
+<span style="color: #66d9ef; font-weight: bold;">1. Electrohack 3.0 National Level Hackathon</span>
+${this.wrapWithColor("Date:", "#ffa07a")} March 14, 2026
+${this.wrapWithColor("Venue:", "#ffa07a")} K.S. Institute of Technology (KSIT), Bengaluru
+${this.wrapWithColor("Project:", "#98fb98")} Student Stock Market Analysis
+${this.wrapWithColor("Repo:", "#87cefa")} https://github.com/toxicbishop/Student-Stock-Market-Analysis
+${this.wrapWithColor("About:", "#ffffff")} Real-time virtual stock market simulator & analysis platform built with Next.js, Prisma, Firebase, and Gemini AI.
+${this.wrapWithColor("Team:", "#ffffff")} Mithil (@mit0506) & Supreeth (@supr1795)
+
+<span style="color: #66d9ef; font-weight: bold;">2. HIRE-4-THON (2026) 24-Hour National Level Hackathon</span>
+${this.wrapWithColor("Date:", "#ffa07a")} March 26–27, 2026 (24-Hour Hackathon)
+${this.wrapWithColor("Venue:", "#ffa07a")} K. S. School of Engineering & Management (KSSEM), Bengaluru
+${this.wrapWithColor("Organizers:", "#ffa07a")} Dept. of AI & DS (with CSE, CS&BS, ECE) | Dyashin & DSEdify
+${this.wrapWithColor("Project:", "#98fb98")} Neotic
+${this.wrapWithColor("Repo:", "#87cefa")} https://github.com/memer0/Neotic
+${this.wrapWithColor("About:", "#ffffff")} Enterprise-grade AI reasoning platform visualizing Chain-of-Thought (CoT) analytical steps as a dynamic Directed Acyclic Graph (DAG).
+${this.wrapWithColor("Team Neotic:", "#ffffff")} Aryan (@memer0) & G Pavan Kumar (@abhintr2006)`;
+
+    const hackathonsDiv = document.createElement("div");
+    hackathonsDiv.innerHTML = hackathons;
+    outputElement.appendChild(hackathonsDiv);
     this.scrollToBottom(outputElement.closest(".terminal-content"));
   }
 
