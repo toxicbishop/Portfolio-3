@@ -856,7 +856,11 @@ ${this.wrapWithColor("Organizers:", "#ffa07a")} Dept. of AI & DS (with CSE, CS&B
 ${this.wrapWithColor("Project:", "#98fb98")} Neotic
 ${this.wrapWithColor("Repo:", "#87cefa")} https://github.com/memer0/Neotic
 ${this.wrapWithColor("About:", "#ffffff")} Enterprise-grade AI reasoning platform visualizing Chain-of-Thought (CoT) analytical steps as a dynamic Directed Acyclic Graph (DAG).
-${this.wrapWithColor("Team Neotic:", "#ffffff")} Aryan (@memer0) & G Pavan Kumar (@abhintr2006)`;
+${this.wrapWithColor("Team Neotic:", "#ffffff")} Aryan (@memer0) & G Pavan Kumar (@abhintr2006)
+
+<span style="color: #66d9ef; font-weight: bold;">3. ISRO Bharatiya Antariksh Hackathon 2026</span>
+${this.wrapWithColor("Year:", "#ffa07a")} 2026
+${this.wrapWithColor("Organization:", "#ffa07a")} Indian Space Research Organisation (ISRO)`;
 
     const hackathonsDiv = document.createElement("div");
     hackathonsDiv.innerHTML = hackathons;
@@ -949,10 +953,7 @@ ${this.wrapWithColor("📍 Location:", "#ff8c00")}    ${this.wrapWithColor(
 
 3. ${this.wrapWithColor("AWS Educate – Serverless Computing", "#ffff00")}
    ${this.wrapWithColor("• Issuer: Amazon Web Services (AWS)", "#ffffff")}
-   ${this.wrapWithColor("• Description: Completed training on serverless architecture, AWS Lambda, and building scalable serverless applications.", "#888888")}
-
-4. ${this.wrapWithColor("ISRO Bharatiya Antariksh Hackathon 2026", "#ffff00")}
-   ${this.wrapWithColor("• Organization: Indian Space Research Organisation (ISRO)", "#ffffff")}`;
+   ${this.wrapWithColor("• Description: Completed training on serverless architecture, AWS Lambda, and building scalable serverless applications.", "#888888")}`;
 
     const certsDiv = document.createElement("div");
     certsDiv.innerHTML = certs;
