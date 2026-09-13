@@ -2852,6 +2852,90 @@ body[data-theme="dark"] .map-popup-company span {
   gap: 2rem;
 }
 
+/* Certifications Section Grid & Neo-Brutalist Cards */
+.certifications-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 1.5rem;
+}
+
+.cert-card {
+  background: var(--white);
+  border: var(--border-width) solid var(--border);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-offset) var(--shadow-offset) 0 var(--border);
+  transition: transform 0.2s, box-shadow 0.2s;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.cert-card:hover {
+  transform: translate(2px, 2px);
+  box-shadow: 3px 3px 0 var(--border);
+}
+
+.cert-icon-box {
+  width: 44px;
+  height: 44px;
+  border: 2px solid var(--border);
+  box-shadow: 3px 3px 0 var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.cert-icon-box.yellow {
+  background-color: var(--yellow);
+  color: #000;
+}
+
+.cert-icon-box.cyan {
+  background-color: var(--cyan);
+  color: #000;
+}
+
+.cert-icon-box.pink {
+  background-color: var(--pink);
+  color: #000;
+}
+
+.cert-icon-box.green {
+  background-color: var(--green);
+  color: #000;
+}
+
+.cert-tag-pill {
+  display: inline-block;
+  border: 1.5px solid var(--border);
+  padding: 0.2rem 0.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  background: transparent;
+  color: var(--text);
+}
+
+.cert-card-title {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  font-weight: 700;
+  line-height: 1.35;
+  color: var(--text);
+  margin-bottom: 0.75rem;
+}
+
+.cert-card-issuer {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--text-muted, #555);
+  margin-top: auto;
+}
+
 .project-card {
   background: var(--white);
   border: var(--border-width) solid var(--border);

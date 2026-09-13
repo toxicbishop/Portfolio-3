@@ -945,13 +945,16 @@ ${this.wrapWithColor("📍 Location:", "#ff8c00")}    ${this.wrapWithColor(
   showCertifications(outputElement = this.output) {
     const certs = `<span style="color: #00ffff; font-weight: bold;">📜 CERTIFICATIONS & CREDENTIALS</span>
 
-1. ${this.wrapWithColor("AWS Certified Cloud Practitioner", "#ffff00")}
+1. ${this.wrapWithColor("AWS Certified AI Practitioner", "#ffff00")}
    ${this.wrapWithColor("• Issuer: Amazon Web Services (AWS)", "#ffffff")}
 
-2. ${this.wrapWithColor("AWS Educate – Getting Started with Networking", "#ffff00")}
+2. ${this.wrapWithColor("AWS Certified Cloud Practitioner", "#ffff00")}
    ${this.wrapWithColor("• Issuer: Amazon Web Services (AWS)", "#ffffff")}
 
-3. ${this.wrapWithColor("AWS Educate – Serverless Computing", "#ffff00")}
+3. ${this.wrapWithColor("AWS Educate – Getting Started with Networking", "#ffff00")}
+   ${this.wrapWithColor("• Issuer: Amazon Web Services (AWS)", "#ffffff")}
+
+4. ${this.wrapWithColor("AWS Educate – Serverless Computing", "#ffff00")}
    ${this.wrapWithColor("• Issuer: Amazon Web Services (AWS)", "#ffffff")}
    ${this.wrapWithColor("• Description: Completed training on serverless architecture, AWS Lambda, and building scalable serverless applications.", "#888888")}`;
 
