@@ -957,6 +957,8 @@ ${this.wrapWithColor("📍 Location:", "#ff8c00")}    ${this.wrapWithColor(
 • ${this.wrapWithColor("Angular", "#ffffff")}
 • ${this.wrapWithColor("Google Cloud", "#ffffff")}
 • ${this.wrapWithColor("AWS", "#ffffff")}
+• ${this.wrapWithColor("AWS Lambda", "#ffffff")}
+• ${this.wrapWithColor("Serverless", "#ffffff")}
 • ${this.wrapWithColor("Azure", "#ffffff")}
 • ${this.wrapWithColor("Docker", "#ffffff")}
 • ${this.wrapWithColor("Terraform", "#ffffff")}
