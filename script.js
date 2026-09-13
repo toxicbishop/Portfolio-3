@@ -804,23 +804,19 @@ ${this.wrapWithColor(
       "#ffffff",
     )}
 
-<span style="color: #00ffff;">DSA STUDY HUB | Creator & Developer</span>
-${this.wrapWithColor("2024 - Present | Full-Stack Web Application", "#ffffff")}
+<span style="color: #00ffff;">NATIONAL SERVICE SCHEME (NSS) | Volunteer (3 Years)</span>
+${this.wrapWithColor("3 Years Service | Bengaluru, Karnataka", "#ffffff")}
 ${this.wrapWithColor(
-  "Interactive DSA learning platform with visualizations & practice problems",
+  "Community Development, Digital Literacy Drives, and Youth Leadership under VTU",
   "#98fb98",
 )}
 
-• ${this.wrapWithColor("Frontend", "#ffa07a")} - ${this.wrapWithColor(
-      "Built with React, TypeScript, and Tailwind CSS",
+• ${this.wrapWithColor("Social Initiatives", "#ffa07a")} - ${this.wrapWithColor(
+      "Organized community development projects and awareness campaigns",
       "#ffffff",
     )}
-• ${this.wrapWithColor("Backend / API", "#ffa07a")} - ${this.wrapWithColor(
-      "Powered by Next.js API routes & MongoDB",
-      "#ffffff",
-    )}
-• ${this.wrapWithColor("Deployment", "#ffa07a")} - ${this.wrapWithColor(
-      "Hosted on Vercel at dsa-study-hub.vercel.app",
+• ${this.wrapWithColor("Leadership", "#ffa07a")} - ${this.wrapWithColor(
+      "Led youth engagement programs and digital literacy drives",
       "#ffffff",
     )}
 
@@ -1250,7 +1246,7 @@ ${this.wrapWithColor("⚡ Repo:", "#ff8c00")} ${this.wrapWithColor(
           "experience.md": {
             type: "file",
             content:
-              "# Experience\n\n1. Cognifyz Technologies (Mar 2026 - May 2026)\n   - Software Development, Machine Learning, Android App Development\n\n2. DSA Study Hub (2024 - Present)\n   - Full-stack interactive learning platform for Data Structures & Algorithms",
+              "# Experience & Milestones\n\n1. Cognifyz Technologies (Mar 2026 - May 2026)\n   - Software Development, Machine Learning, Android App Development\n\n2. National Service Scheme (NSS) (3 Years Service)\n   - Volunteer Service under VTU, Community Development, Youth Leadership",
           },
           "education.md": {
             type: "file",
@@ -1265,7 +1261,7 @@ ${this.wrapWithColor("⚡ Repo:", "#ff8c00")} ${this.wrapWithColor(
           "hackathons.md": {
             type: "file",
             content:
-              "# Hackathons & Competitions\n\n1. Electrohack 3.0 (March 14, 2026, KSIT)\n   - Project: Student Stock Market Analysis\n\n2. HIRE-4-THON (March 26–27, 2026, KSSEM)\n   - Project: Neotic\n\n3. ISRO Bharatiya Antariksh Hackathon (2026)\n   - Organization: Indian Space Research Organisation (ISRO)",
+              "# Hackathons & Competitions\n\n1. Electrohack 3.0 (March 14, 2026, KSIT)\n   - Project: Student Stock Market Analysis\n\n2. HIRE-4-THON (March 26–27, 2026, KSSEM)\n   - Project: Neotic\n\n3. ISRO Bharatiya Antariksh Hackathon (2026)\n   - Venue: National Remote Sensing Centre (NRSC), Hyderabad, Telangana\n   - Organization: Indian Space Research Organisation (ISRO)",
           },
           projects: {
             type: "directory",

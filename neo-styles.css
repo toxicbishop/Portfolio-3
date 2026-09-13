@@ -596,7 +596,8 @@ body[data-theme="dark"] .theme-toggle {
   background: var(--secondary);
 }
 
-body[data-theme="dark"] .section-title {
+body[data-theme="dark"] .section-title,
+body[data-theme="dark"] .section-title-center {
   background: var(--primary);
   color: var(--text);
 }
