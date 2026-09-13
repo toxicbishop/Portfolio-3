@@ -300,6 +300,10 @@
             <div class="checkpoint-dot"></div>
             <span class="checkpoint-label">Experience</span>
           </div>
+          <div class="checkpoint" data-section="certifications">
+            <div class="checkpoint-dot"></div>
+            <span class="checkpoint-label">Certifications</span>
+          </div>
           <div class="checkpoint" data-section="contact">
             <div class="checkpoint-dot"></div>
             <span class="checkpoint-label">Contact</span>
@@ -321,6 +325,7 @@
             <a href="#projects" class="nav-link">Projects</a>
             <a href="#hackathons" class="nav-link">Hackathons</a>
             <a href="#experience" class="nav-link">Experience</a>
+            <a href="#certifications" class="nav-link">Certifications</a>
             <a href="#contact" class="nav-cta">Get in Touch!</a>
             <button
               id="theme-toggle"
@@ -1168,6 +1173,64 @@
           </div>
         </section>
 
+        <section class="section" id="certifications">
+          <h2 class="section-title">CERTIFICATIONS</h2>
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="timeline-marker"></div>
+              <div class="card timeline-content">
+                <div class="job-header">
+                  <div>
+                    <h3 class="job-title"><i class="fab fa-aws"></i> AWS Certified Cloud Practitioner</h3>
+                    <p class="company"><i class="fas fa-certificate"></i> Amazon Web Services (AWS)</p>
+                  </div>
+                  <span class="badge"><i class="fas fa-award"></i> Certification</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-marker"></div>
+              <div class="card timeline-content">
+                <div class="job-header">
+                  <div>
+                    <h3 class="job-title"><i class="fab fa-aws"></i> AWS Educate – Getting Started with Networking</h3>
+                    <p class="company"><i class="fas fa-certificate"></i> Amazon Web Services (AWS)</p>
+                  </div>
+                  <span class="badge"><i class="fas fa-award"></i> AWS Educate</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-marker"></div>
+              <div class="card timeline-content">
+                <div class="job-header">
+                  <div>
+                    <h3 class="job-title"><i class="fab fa-aws"></i> AWS Educate – Serverless Computing</h3>
+                    <p class="company"><i class="fas fa-certificate"></i> Amazon Web Services (AWS)</p>
+                  </div>
+                  <span class="badge"><i class="fas fa-award"></i> AWS Educate</span>
+                </div>
+                <p class="job-desc" style="margin-top: 10px;">Completed AWS Educate training on serverless computing, gaining foundational knowledge of serverless architecture and AWS services such as AWS Lambda. Developed an understanding of how serverless applications can be built, deployed, and scaled without managing underlying servers.</p>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-marker"></div>
+              <div class="card timeline-content">
+                <div class="job-header">
+                  <div>
+                    <h3 class="job-title"><i class="fas fa-rocket"></i> ISRO Bharatiya Antariksh Hackathon 2026</h3>
+                    <p class="company"><i class="fas fa-university"></i> Indian Space Research Organisation (ISRO)</p>
+                  </div>
+                  <span class="badge"><i class="fas fa-award"></i> Hackathon 2026</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         <section class="section" id="contact">
           <h2 class="section-title">GET IN TOUCH</h2>
           <div class="contact-container-compact">
@@ -1857,7 +1920,7 @@
         progressBarFill.style.width = progress + "%";
 
         // Update active checkpoint based on scroll position
-        const sections = ["hero", "about", "skills", "projects", "hackathons", "experience", "contact"];
+        const sections = ["hero", "about", "skills", "projects", "hackathons", "experience", "certifications", "contact"];
         let activeIndex = 0;
 
         sections.forEach((sectionId, index) => {

@@ -205,6 +205,7 @@ class TerminalResume {
       "skills",
       "experience",
       "education",
+      "certifications",
       "contact",
       "clear",
       "projects",
@@ -463,6 +464,9 @@ class TerminalResume {
       case "education":
         this.showEducation(outputElement);
         break;
+      case "certifications":
+        this.showCertifications(outputElement);
+        break;
       case "skills":
         this.showSkills(outputElement);
         break;
@@ -576,6 +580,9 @@ class TerminalResume {
       this.wrapWithColor("• education", "#98fb98") +
       "  " +
       this.wrapWithColor("View my educational background\n", "#ffffff") +
+      this.wrapWithColor("• certifications", "#98fb98") +
+      "" +
+      this.wrapWithColor("View my certificates & credentials\n", "#ffffff") +
       this.wrapWithColor("• contact", "#98fb98") +
       "    " +
       this.wrapWithColor("Get my contact information\n", "#ffffff") +
@@ -928,6 +935,28 @@ ${this.wrapWithColor("📍 Location:", "#ff8c00")}    ${this.wrapWithColor(
     const educationDiv = document.createElement("div");
     educationDiv.innerHTML = education;
     outputElement.appendChild(educationDiv);
+    this.scrollToBottom(outputElement.closest(".terminal-content"));
+  }
+
+  showCertifications(outputElement = this.output) {
+    const certs = `<span style="color: #00ffff; font-weight: bold;">📜 CERTIFICATIONS & CREDENTIALS</span>
+
+1. ${this.wrapWithColor("AWS Certified Cloud Practitioner", "#ffff00")}
+   ${this.wrapWithColor("• Issuer: Amazon Web Services (AWS)", "#ffffff")}
+
+2. ${this.wrapWithColor("AWS Educate – Getting Started with Networking", "#ffff00")}
+   ${this.wrapWithColor("• Issuer: Amazon Web Services (AWS)", "#ffffff")}
+
+3. ${this.wrapWithColor("AWS Educate – Serverless Computing", "#ffff00")}
+   ${this.wrapWithColor("• Issuer: Amazon Web Services (AWS)", "#ffffff")}
+   ${this.wrapWithColor("• Description: Completed training on serverless architecture, AWS Lambda, and building scalable serverless applications.", "#888888")}
+
+4. ${this.wrapWithColor("ISRO Bharatiya Antariksh Hackathon 2026", "#ffff00")}
+   ${this.wrapWithColor("• Organization: Indian Space Research Organisation (ISRO)", "#ffffff")}`;
+
+    const certsDiv = document.createElement("div");
+    certsDiv.innerHTML = certs;
+    outputElement.appendChild(certsDiv);
     this.scrollToBottom(outputElement.closest(".terminal-content"));
   }
 
